@@ -29,19 +29,19 @@ feita no "cliente", no seu browser. A pagina NÃO recarrega.
 
 
 ## 3. Começando um projeto mobile 
-1-  `yarn global add expo` (instalação do expo - bom pra apps pequenos ou com pouca escalabilidade)
-2- `expo init nome_do_projeto` -> blank -> usar yarn
-3- `cd nome_do_projeto` -> `yarn start`
-6- Cria-se uma pasta `src/pages/` , onde ficam os JS pra cada página da aplicação, e na `/src` um arquivo `routes.js`
-7- Rodar no terminal dentro do projeto a Library de navegação do app :
+-  `yarn global add expo` (instalação do expo - bom pra apps pequenos ou com pouca escalabilidade)
+- `expo init nome_do_projeto` -> blank -> usar yarn
+- `cd nome_do_projeto` -> `yarn start`
+- Cria-se uma pasta `src/pages/` , onde ficam os JS pra cada página da aplicação, e na `/src` um arquivo `routes.js`
+- Rodar no terminal dentro do projeto a Library de navegação do app :
 `yarn add react-navigation`
 `yarn add @react-native-community/masked-view`
 `yarn add react-navigation-stack` //instalação da navegação por pilha (usando botões)
 
 Próximos passos dependem se o expo é usado ou não, ver site: https://reactnavigation.org/docs/en/getting-started.html
 
-8- Criar createStackNavigator com um objeto que passa as rotas do app, visualizar no “Hello react navigation” 
-9- As APIs usadas (como location e MapView) possuem a documentação no site de APIs do expo, podemos procurar dependências e usos lá.
+- Criar createStackNavigator com um objeto que passa as rotas do app, visualizar no “Hello react navigation” 
+- As APIs usadas (como location e MapView) possuem a documentação no site de APIs do expo, podemos procurar dependências e usos lá.
 
 ### 3.1 Observações quanto ao projeto mobile
 1- No react-native, não existe “contexto” (`h1 h2 h3 p` etc são textos, porém diferentes. Aqui só existe `Text`, todos são iguais, a estilização é diferenciada usando `“style”`). Também não existem classes e ids.
