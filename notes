@@ -1,0 +1,54 @@
+Abordagem SPA:
+
+Servidor traz apenas resposta em JSON, sendo toda a parte de apresentação de HTML CSS e JS
+feita no "cliente", no seu browser. A pagina NAO recarrega.
+
+Abordagem tradicional: 
+
+A página completa HTML é retornada na requisição, limitando o front-end. 
+A cada rota, é necessário retornar todo o html do servidor (node - backend)
+
+
+
+Aula sobre Interface WEB:
+
+3 Conceitos do react:
+
+-componente: Sempre primeira MAIUSCULA: Bloco isolado de HTML, CSS e JS o qual nao interfere no restante da aplicação
+-estado: infos mantidas pelo componente (lembrar do conceito IMUTABILIDADE - vc nunca muda um dado, vc cria ourto baseado no anterior)
+-propriedade: como os atributos do HTML (title, class, id, etc). Infos q um componente PAI (app) passa pro filho (header)
+
+mongoDB atlas cloud projeto omni 10 xbipe-omni10!G
+
+Em etapa de produção, tb no atlas, ir em Network access security e mudar a Whitelist de IP pro ip do servidor (atualmente acessa de qlqr lugar)
+
+
+App mobile:
+
+1-  yarn global add expo (instalação do expo - bom pra apps pequenos ou com pouca escalabilidade)
+2- ‘expo init nome_do_projeto’ -> blank -> usar yarn
+3- cd nome_do_projeto -> yarn start
+4- O browser vai abrir, vai dar um QR code, vc entra via emulador ou app expo do celular 5- entrar na pasta do projeto e abrir usando o code
+6- Cria uma pasta src/pages/ , cria os JS pra cada pagina da aplicação, e na SRC um arquivo routes.js
+7- Rodar no terminal dentro do projeto a Library de navegação do app :
+yarn add react-navigation
+Yarn add @react-native-community/masked-view
+
+Próximos passos dependem se ta com expo ou não, ver site: https://reactnavigation.org/docs/en/getting-started.html
+Dps instalar a navegação por pilha (usando botões etc) 
+yarn add react-navigation-stack
+
+8- Criar createStackNavigator com um objeto que passa as rotas do app, visualizar no “Hello react navigation” 
+9- Como vamos usar a api de mapas, ver na documentação do expo MapView
+
+
+
+OBSs:
+1- No react-native, não existe “contexto” (h1 h2 h3 p etc são textos porem diferentes, aqui só existe Text, todos são iguais, a estilização é diferenciada usando “style”). Também não existem classes e ids
+2- O style é JS, então é “fontFamily” ao invés do “font-family” do css, e os valores são dados entre aspas duplas, como strings
+3- Quando uma imagem é pegada de fora (internet), não aparece se você não estilizar com um TAMANHO
+4- em api.js , depende de onde estamos acessando o app. Se for um dispositivo real, copiamos o ip mostrado na pagina do expo, se for um emulador, localhost, MAS USANDO A PORTA USADA NO BACKEND
+
+Funcionalidades avançadas:
+
+1- O backend envia resposta ao front apenas mediante requisição, mas precisamos adicionar devs em tempo real, então o backend precisa mandar respostas sem necessitar de requisição, pra isso usamos protocolo websocket (socket.io) 

@@ -1,0 +1,17 @@
+main {
+    flex: 1;
+}
+
+/* responsividade - separar 1 dev por linha quando a largura for menor que 650px (1h08min da aula)*/
+@media (max-width: 650px) {
+    main ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+main ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    list-style: none;
+}

@@ -1,0 +1,31 @@
+#app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+
+    display: flex;
+    flex-direction: row; /*lado a lado numa linha (row) */
+    align-items: flex-start; /* aside e main fiquem alinhados ao TOPO */
+}
+
+#app aside{
+    margin-right: 30px;
+}
+
+/* responsividade de modo simples:
+No navegador, inspecionando elemento, diminuimos a janela até ver onde o layout n se comporta muito bem no caso 1000px */
+
+@media (max-width: 1000px) {
+    #app {
+        flex-direction: column;
+    }
+
+    #app main {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    #app aside {
+        width: 100%;
+    }
+}
